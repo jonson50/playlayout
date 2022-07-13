@@ -1992,3 +1992,23 @@ a {
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important
 }
+
+/* Adding new classes to library */
+.w3-round-top,
+.w3-round-medium-top {
+  border-radius: 8px 8px 0px 0px;
+}
+.w3-round-bottom,
+.w3-round-medium-bottom {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.w3-round-left,
+.w3-round-medium-left {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.w3-round-right,
+.w3-round-medium-right {
+  border-radius: 0px 8px 8px 0px;
+}

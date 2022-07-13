@@ -12,7 +12,7 @@ export class SideNavComponent implements OnInit {
   showSideNav: Observable<boolean>;
   @Input() sidenavTemplateRef: any;
   @Input() duration: number = 0.25;
-  @Input() navWidth: number = 300;
+  @Input() navWidth: number = 250;
   @Input() direction: string = 'left';
 
   constructor(private navService: NavigationService) {
