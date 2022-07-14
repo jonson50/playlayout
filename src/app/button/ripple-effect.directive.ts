@@ -9,7 +9,7 @@ export class RippleEffectDirective implements OnInit {
   private player!: AnimationPlayer;
   private firstBackground!: string;
 
-  constructor(private renderer: Renderer2, private elem: ElementRef, private builder: AnimationBuilder) { }
+  constructor(private elem: ElementRef, private builder: AnimationBuilder) { }
 
   /* @HostListener('mouseover')
   onHover() {

@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
 import { HeaderComponent } from './layout/header/header.component';
-
-import { Ngw3CardModule } from './card/ngw3-card.module';
+// Pages for documentation
 import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { CardsComponent } from './pages/cards/cards.component';
+// Ng-W3 Modules
+import { Ngw3CardModule } from './card/ngw3-card.module';
+import { Ngw3ButtonModule } from './button/ngw3-button.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { CardsComponent } from './pages/cards/cards.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    Ngw3CardModule
+    Ngw3CardModule,
+    Ngw3ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
