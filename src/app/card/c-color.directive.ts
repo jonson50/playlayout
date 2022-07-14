@@ -12,7 +12,6 @@ export class CColorDirective implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.cColor);
     this.el.nativeElement.firstChild.classList.add(this.cColor);
   }
 

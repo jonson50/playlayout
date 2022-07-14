@@ -1494,10 +1494,10 @@ a {
   float: right !important
 }
 
-.w3-button:hover {
+/* .w3-button:hover {
   color: #000 !important;
   background-color: #ccc !important
-}
+} */
 
 .w3-transparent,
 .w3-hover-none:hover {
@@ -2012,3 +2012,20 @@ a {
 .w3-round-medium-right {
   border-radius: 0px 8px 8px 0px;
 }
+
+/*
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+ */

@@ -14,7 +14,6 @@ export class W3CardDirective implements OnInit {
   ngOnInit() {
     let firstChild = this.el.nativeElement.firstChild.firstChild;
     let lastChild = this.el.nativeElement.firstChild.lastChild;
-    console.log(lastChild.localName);
 
     if(firstChild.localName === 'img' || firstChild.localName === 'div') {
       firstChild.classList.add('w3-round-top');

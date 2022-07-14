@@ -18,9 +18,6 @@ export class AppComponent {
   setMainWidth() {
     let mainAreaStyle: any = {};
     mainAreaStyle['margin-left'] = this.navService.getSideNavWidth() + 'px';
-
-    //console.log(mainAreaStyle);
-
     return mainAreaStyle;
   }
 }

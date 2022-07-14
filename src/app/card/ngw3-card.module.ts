@@ -6,6 +6,7 @@ import { Ngw3CardFooterComponent } from './ngw3-card-footer/ngw3-card-footer.com
 import { Ngw3CardBodyComponent } from './ngw3-card-body/ngw3-card-body.component';
 import { CColorDirective } from './c-color.directive';
 import { W3CardDirective } from './w3-card.directive';
+import { RippleEffectDirective } from './ripple-effect.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { W3CardDirective } from './w3-card.directive';
     Ngw3CardFooterComponent,
     Ngw3CardBodyComponent,
     CColorDirective,
-    W3CardDirective
+    W3CardDirective,
+    RippleEffectDirective
   ],
   imports: [
     CommonModule
@@ -25,7 +27,8 @@ import { W3CardDirective } from './w3-card.directive';
     Ngw3CardFooterComponent,
     Ngw3CardBodyComponent,
     CColorDirective,
-    W3CardDirective
+    W3CardDirective,
+    RippleEffectDirective
   ]
 })
 export class Ngw3CardModule { }
