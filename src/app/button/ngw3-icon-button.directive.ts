@@ -1,20 +1,16 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 import { Colors } from './d-colors';
-import { Shapes } from './d-shapes';
 
 @Directive({
-  selector: '[ngw3-button]'
+  selector: '[ngw3-icon-button]'
 })
-export class Ngw3ButtonDirective implements OnInit {
+export class Ngw3IconButtonDirective implements OnInit {
   private isValidColor: boolean = false;
   private button:any;
   private baseColor!:string;
 
   @Input()
   color: string | undefined;
-
-  @Input()
-  round: string = "normal";
 
   @Input()
   bordered: boolean = true;
@@ -29,18 +25,14 @@ export class Ngw3ButtonDirective implements OnInit {
   }
 
   ngOnInit() {
-    if(this.reised) {
-      this.button.classList.add('w3-btn');
-    } else {
-      this.button.classList.add('w3-button');
-    }
-    // Getting the round shape for the button
-    const round: keyof typeof Shapes = this.round;
-    if(Shapes[round]) {
-      this.button.classList.add(Shapes[round]);
-    } else {
-      this.button.classList.add('w3-round');
-    }
+    this.button.classList.add('w3-circle');
+    this.button.classList.add('w3-xlarge');
+    this.button.classList.add('w3-icon-button');
+    const rad = (this.button.clientHeight >= this.button.clientWidth) ? this.button.clientHeight : this.button.clientWidth;
+    this.button.style.backgroundColor = 'inherit';
+    this.button.style.width = `${rad}px`;
+    this.button.style.height = `${rad}px`;
+
     // When color property is valid then it should be found inside the Colors dictionary
     // and so to get the base color for being applied to the button.
     if (this.color) {
@@ -82,4 +74,5 @@ export class Ngw3ButtonDirective implements OnInit {
   onMouseleave() {
     this.button.style.setProperty("background-color", "");
   }
+
 }

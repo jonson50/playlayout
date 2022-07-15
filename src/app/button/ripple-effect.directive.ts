@@ -5,61 +5,49 @@ import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular
   selector: '[rippleEffect]',
 })
 export class RippleEffectDirective implements OnInit {
-
   private player!: AnimationPlayer;
-  private firstBackground!: string;
+  private button:any;
+  private baseColor!:string;
 
-  constructor(private elem: ElementRef, private builder: AnimationBuilder) { }
+  constructor(private elem: ElementRef, private builder: AnimationBuilder) {
+    this.button = this.elem.nativeElement;
+   }
 
-  /* @HostListener('mouseover')
-  onHover() {
-    const button = this.elem.nativeElement;
-    this.firstBackground = window.getComputedStyle(button).backgroundColor;
-    let newBackground = this.firstBackground.replace(')',', 0.7)');
-    console.log(newBackground)
-    button.style.setProperty("background-color", newBackground, "important");
+  ngOnInit() {
+    this.button.style.position = "relative";
   }
-
-
-  @HostListener('mouseleave') onMouseleave() {
-    const button = this.elem.nativeElement;
-    button.style.setProperty("background-color", this.firstBackground, "important");
-  } */
-
 
   @HostListener('click', ['$event'])
   onClick(e: any) {
+    // Getting the base color as it was created
+    this.baseColor = window.getComputedStyle(this.button).color;
     if (this.player) { this.player.destroy(); }
 
-    const button = this.elem.nativeElement;
     const circle = document.createElement("span");
-    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const diameter = Math.max(this.button.clientWidth, this.button.clientHeight);
     const radius = diameter / 2;
 
     circle.style.width = circle.style.height = `${diameter}px`;
-    circle.style.left = `${e.clientX - (button.offsetLeft + radius)}px`;
-    circle.style.top = `${e.clientY - (button.offsetTop + radius)}px`;
+    circle.style.left = `${e.clientX - (this.button.offsetLeft + radius)}px`;
+    circle.style.top = `${e.clientY - (this.button.offsetTop + radius)}px`;
     circle.style.position = 'absolute';
     circle.style.borderRadius = '50%';
-    circle.style.backgroundColor = `rgba(255, 255, 255, 0.4)`;
+    // Calculating the background effect color:
+    const arrayColor = this.baseColor.split(')');
+    arrayColor[1] = "0.4" + ")";
+    circle.style.backgroundColor = arrayColor.join(', ');
     circle.classList.add("ripple");
 
-    const ripple = button.getElementsByClassName("ripple")[0];
+    const ripple = this.button.getElementsByClassName("ripple")[0];
     if (ripple) {
       ripple.remove();
     }
 
     const factory = this.builder.build(this.onRipple());
     this.player = factory.create(circle);
-    button.appendChild(circle);
+    this.button.appendChild(circle);
     this.player.play();
   }
-
-  ngOnInit() {
-    const currentElem = this.elem.nativeElement;
-    currentElem.style.position = "relative";
-  }
-
   /*
   Perform wave animation
   */

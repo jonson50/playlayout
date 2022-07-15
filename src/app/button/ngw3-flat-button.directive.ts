@@ -1,5 +1,6 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
-import { Colors } from './colors';
+import { Colors } from './d-colors';
+import { Shapes } from './d-shapes';
 
 @Directive({
   selector: '[ngw3-flat-button]'
@@ -7,29 +8,45 @@ import { Colors } from './colors';
 export class Ngw3FlatButtonDirective implements OnInit {
   private basisBackground!: string;
   private isValidColor: boolean = false;
+  private button:any;
 
   @Input()
   color: string | undefined;
 
-  constructor(private elem: ElementRef) { }
+  @Input()
+  round: string = "normal";
+
+  @Input()
+  reised: boolean = false;
+
+  constructor(private elem: ElementRef) { this.button = this.elem.nativeElement; }
 
   ngOnInit() {
-    this.elem.nativeElement.classList.add('w3-button');
-    this.elem.nativeElement.classList.add('w3-round');
+    if(this.reised) {
+      this.button.classList.add('w3-btn');
+    } else {
+      this.button.classList.add('w3-button');
+    }
+    // Getting the round shape for the button
+    const round: keyof typeof Shapes = this.round;
+    if(Shapes[round]) {
+      this.button.classList.add(Shapes[round]);
+    } else {
+      this.button.classList.add('w3-round');
+    }
 
     if (this.color) {
       const color: keyof typeof Colors = this.color;
       if (Colors[color]) {
         this.isValidColor = true;
-        this.elem.nativeElement.classList.add(Colors[color]);
+        this.button.classList.add(Colors[color]);
       }
     }
-    this.basisBackground = window.getComputedStyle(this.elem.nativeElement).backgroundColor;
+    this.basisBackground = window.getComputedStyle(this.button).backgroundColor;
   }
 
   @HostListener('mouseover')
   onHover() {
-    const button = this.elem.nativeElement;
     let hoverColor = 'rgb(230, 230, 230)';
 
     if (this.isValidColor) {
@@ -38,13 +55,12 @@ export class Ngw3FlatButtonDirective implements OnInit {
       let hexHoverColor = this.convertRGBtoHex(parseInt(r) * factor, parseInt(g) * factor, parseInt(b) * factor);
       hoverColor = `#${hexHoverColor}`;
     }
-    button.style.setProperty("background-color", hoverColor, "important");
+    this.button.style.setProperty("background-color", hoverColor, "important");
   }
 
   @HostListener('mouseleave')
   onMouseleave() {
-    const button = this.elem.nativeElement;
-    button.style.setProperty("background-color", this.basisBackground, "important");
+    this.button.style.setProperty("background-color", this.basisBackground, "important");
   }
 
   //Getting Hex value from rgb Value

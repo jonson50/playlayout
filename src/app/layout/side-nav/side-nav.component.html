@@ -1,15 +1,15 @@
 <div class="w3-sidebar w3-bar-block w3-collapse w3-card-4 w3-theme" [style.width.px]="navWidth" style="z-index: 5;"
 [ngStyle]="getSideNavBarStyle((showSideNav | async)!)">
   <button class="w3-bar-item w3-button w3-large w3-hide-large" (click)="toggleSideNav(false)">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-btn" rippleEffect
+  <a href="#" class="w3-bar-item w3-button" rippleEffect
       routerLink="/buttons"
       routerLinkActive="w3-theme-d3"
       [routerLinkActiveOptions]="{ exact: true }"
   >Buttons</a>
-  <a href="#" class="w3-bar-item w3-btn" rippleEffect
+  <a href="#" class="w3-bar-item w3-button" rippleEffect
       routerLink="/cards"
       routerLinkActive="w3-theme-d3"
       [routerLinkActiveOptions]="{ exact: true }"
   >Cards</a>
-  <a href="#" class="w3-bar-item w3-btn" rippleEffect>Link 3</a>
+  <a href="#" class="w3-bar-item w3-button" rippleEffect>Link 3</a>
 </div>
