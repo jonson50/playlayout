@@ -24,23 +24,26 @@ export class Ngw3ButtonDirective implements OnInit {
 
   constructor(private elem: ElementRef) {
     this.button = this.elem.nativeElement;
-    // Getting the base color as it was created
-    this.baseColor = window.getComputedStyle(this.button).backgroundColor;
   }
 
   ngOnInit() {
+    // Getting the base color as it was created
+    this.baseColor = window.getComputedStyle(this.button).backgroundColor;
+
     if(this.reised) {
       this.button.classList.add('w3-btn');
     } else {
       this.button.classList.add('w3-button');
     }
     // Getting the round shape for the button
-    const round: keyof typeof Shapes = this.round;
-    if(Shapes[round]) {
-      this.button.classList.add(Shapes[round]);
-    } else {
-      this.button.classList.add('w3-round');
-    }
+    if(this.round !== "square") {
+      const round: keyof typeof Shapes = this.round;
+      if(Shapes[round]) {
+        this.button.classList.add(Shapes[round]);
+      } else {
+        this.button.classList.add('w3-round');
+      }
+    } 
     // When color property is valid then it should be found inside the Colors dictionary
     // and so to get the base color for being applied to the button.
     if (this.color) {
@@ -74,6 +77,7 @@ export class Ngw3ButtonDirective implements OnInit {
       const arrayColor = this.baseColor.split(')');
       arrayColor[1] = "0.1" + ")";
       hoverColor = arrayColor.join(', ');
+      this.button.style.setProperty("color", this.baseColor, "important");
     }
     this.button.style.setProperty("background-color", hoverColor, "important");
   }

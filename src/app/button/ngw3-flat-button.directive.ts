@@ -6,9 +6,10 @@ import { Shapes } from './d-shapes';
   selector: '[ngw3-flat-button]'
 })
 export class Ngw3FlatButtonDirective implements OnInit {
-  private basisBackground!: string;
   private isValidColor: boolean = false;
-  private button:any;
+  private button: any;
+  private baseColor!: string;
+  private textColor!: string;
 
   @Input()
   color: string | undefined;
@@ -22,17 +23,19 @@ export class Ngw3FlatButtonDirective implements OnInit {
   constructor(private elem: ElementRef) { this.button = this.elem.nativeElement; }
 
   ngOnInit() {
-    if(this.reised) {
+    if (this.reised) {
       this.button.classList.add('w3-btn');
     } else {
       this.button.classList.add('w3-button');
     }
     // Getting the round shape for the button
-    const round: keyof typeof Shapes = this.round;
-    if(Shapes[round]) {
-      this.button.classList.add(Shapes[round]);
-    } else {
-      this.button.classList.add('w3-round');
+    if (this.round !== "square") {
+      const round: keyof typeof Shapes = this.round;
+      if (Shapes[round]) {
+        this.button.classList.add(Shapes[round]);
+      } else {
+        this.button.classList.add('w3-round');
+      }
     }
 
     if (this.color) {
@@ -42,7 +45,8 @@ export class Ngw3FlatButtonDirective implements OnInit {
         this.button.classList.add(Colors[color]);
       }
     }
-    this.basisBackground = window.getComputedStyle(this.button).backgroundColor;
+    this.baseColor = window.getComputedStyle(this.button).backgroundColor;
+    this.textColor = window.getComputedStyle(this.button).color;
   }
 
   @HostListener('mouseover')
@@ -50,17 +54,18 @@ export class Ngw3FlatButtonDirective implements OnInit {
     let hoverColor = 'rgb(230, 230, 230)';
 
     if (this.isValidColor) {
-      let [r, g, b] = this.basisBackground.split('(')[1].split(')')[0].split(',');
+      let [r, g, b] = this.baseColor.split('(')[1].split(')')[0].split(',');
       const factor = 0.90; // 10% Shade
       let hexHoverColor = this.convertRGBtoHex(parseInt(r) * factor, parseInt(g) * factor, parseInt(b) * factor);
       hoverColor = `#${hexHoverColor}`;
+      this.button.style.setProperty("color", this.textColor, "important");
     }
     this.button.style.setProperty("background-color", hoverColor, "important");
   }
 
   @HostListener('mouseleave')
   onMouseleave() {
-    this.button.style.setProperty("background-color", this.basisBackground, "important");
+    this.button.style.setProperty("background-color", this.baseColor, "important");
   }
 
   //Getting Hex value from rgb Value

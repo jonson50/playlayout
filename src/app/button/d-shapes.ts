@@ -4,5 +4,4 @@ export const Shapes: Record<string, string> = {
   large: "w3-round-large",
   xlarge: "w3-round-xlarge",
   xxlarge: "w3-round-xxlarge",
-  flat: ""
 };

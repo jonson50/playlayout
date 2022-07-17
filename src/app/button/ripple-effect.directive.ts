@@ -1,17 +1,17 @@
 import { animate, AnimationBuilder, AnimationMetadata, AnimationPlayer, style } from '@angular/animations';
-import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[rippleEffect]',
 })
 export class RippleEffectDirective implements OnInit {
   private player!: AnimationPlayer;
-  private button:any;
-  private baseColor!:string;
+  private button: any;
+  private baseColor!: string;
 
   constructor(private elem: ElementRef, private builder: AnimationBuilder) {
     this.button = this.elem.nativeElement;
-   }
+  }
 
   ngOnInit() {
     this.button.style.position = "relative";
@@ -53,7 +53,7 @@ export class RippleEffectDirective implements OnInit {
   */
   private onRipple(): AnimationMetadata[] {
     return [
-      style({ transform: 'scale(0)',  opacity: 1 }),
+      style({ transform: 'scale(0)', opacity: 1 }),
       animate('500ms linear', style({ transform: 'scale(5)', opacity: 0 })),
     ];
   }
