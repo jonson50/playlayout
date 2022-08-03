@@ -1994,8 +1994,9 @@ a {
 .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff !important
 }
-
-/* Adding new classes to library */
+/*
+Added by John Bermeo
+New classes to library */
 .w3-round-top,
 .w3-round-medium-top {
   border-radius: 8px 8px 0px 0px;
@@ -2015,9 +2016,6 @@ a {
   border-radius: 0px 8px 8px 0px;
 }
 
-/*
-Added by John Bermeo
- */
 .w3-icon-button {
   border: none;
   display: inline-block;
@@ -2030,3 +2028,5 @@ Added by John Bermeo
   cursor: pointer;
   white-space: nowrap
 }
+
+

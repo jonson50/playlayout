@@ -1,0 +1,10 @@
+<div class="w3-bar w3-border-bottom" *ngIf="tabs">
+  <ng-container *ngFor="let tab of tabs">
+    <button class="w3-bar-item w3-button w3-hover-light-grey" (click)="selectTab(tab)"
+      [ngClass]="{'w3-tab-active': tab.selected, 'w3-tab-inactive': !tab.selected}" rippleEffect>
+      {{ tab.title }}
+    </button>
+  </ng-container>
+</div>
+
+<ng-content></ng-content>

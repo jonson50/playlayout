@@ -9,9 +9,12 @@ import { HeaderComponent } from './layout/header/header.component';
 // Pages for documentation
 import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { CardsComponent } from './pages/cards/cards.component';
+import { TabsComponent } from './pages/tabs/tabs.component';
 // Ng-W3 Modules
 import { Ngw3CardModule } from './card/ngw3-card.module';
 import { Ngw3ButtonModule } from './button/ngw3-button.module';
+import { Ngw3TabsModule } from './tabs/ngw3-tabs.module';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { Ngw3ButtonModule } from './button/ngw3-button.module';
     HeaderComponent,
     ButtonsComponent,
     CardsComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     Ngw3CardModule,
-    Ngw3ButtonModule
+    Ngw3ButtonModule,
+    Ngw3TabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
