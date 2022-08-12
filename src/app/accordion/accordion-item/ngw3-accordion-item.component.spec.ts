@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Ngw3TabsComponent } from './ngw3-tabs.component';
+import { Ngw3AccordionItemComponent } from './ngw3-accordion-item.component';
 
-describe('NgW3TabsComponent', () => {
-  let component: Ngw3TabsComponent;
-  let fixture: ComponentFixture<Ngw3TabsComponent>;
+describe('Ngw3AccordionItemComponent', () => {
+  let component: Ngw3AccordionItemComponent;
+  let fixture: ComponentFixture<Ngw3AccordionItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Ngw3TabsComponent ]
+      declarations: [ Ngw3AccordionItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Ngw3TabsComponent);
+    fixture = TestBed.createComponent(Ngw3AccordionItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

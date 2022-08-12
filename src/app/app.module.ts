@@ -10,10 +10,13 @@ import { HeaderComponent } from './layout/header/header.component';
 import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { TabsComponent } from './pages/tabs/tabs.component';
+import { AccordionComponent } from './pages/accordion/accordion.component';
 // Ng-W3 Modules
 import { Ngw3CardModule } from './card/ngw3-card.module';
 import { Ngw3ButtonModule } from './button/ngw3-button.module';
 import { Ngw3TabsModule } from './tabs/ngw3-tabs.module';
+import { Ngw3AccordionModule } from './accordion/ngw3-accordion.module';
+
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import { Ngw3TabsModule } from './tabs/ngw3-tabs.module';
     ButtonsComponent,
     CardsComponent,
     TabsComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { Ngw3TabsModule } from './tabs/ngw3-tabs.module';
     AppRoutingModule,
     Ngw3CardModule,
     Ngw3ButtonModule,
-    Ngw3TabsModule
+    Ngw3TabsModule,
+    Ngw3AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

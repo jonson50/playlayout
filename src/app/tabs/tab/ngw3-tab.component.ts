@@ -5,13 +5,11 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './ngw3-tab.component.html',
   styleUrls: ['./ngw3-tab.component.scss']
 })
-export class Ngw3TabComponent implements OnInit {
+export class Ngw3TabComponent {
+
   @Input('tabTitle') title!: string;
   @Input() selected = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

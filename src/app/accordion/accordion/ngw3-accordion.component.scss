@@ -1,0 +1,14 @@
+:host ::ng-deep ngw3-accordion-item:first-child .accordion-header {
+  border-radius: 7px 7px 0px 0px;
+}
+
+:host ::ng-deep ngw3-accordion-item:last-child .active .accordion-header {
+  border-radius: 0;
+  transition: border-radius 0s;
+}
+
+:host ::ng-deep ngw3-accordion-item:last-child .accordion-header {
+  border-radius: 0px 0px 7px 7px;
+  transition: border-radius 1.30s;
+}
+

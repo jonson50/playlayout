@@ -1,0 +1,111 @@
+<div class="w3-container">
+  <h2>Accordion</h2>
+  <ngw3-tabs>
+    <ngw3-tab tabTitle="Overview">
+      <div class="w3-row">
+        <div class="w3-col l10 s12">
+          <!-- Main content for Overview -->
+          <h3>Basic Accordion</h3>
+          <button (click)="accordion.collapseAll()">Collapse all</button>
+          <button (click)="item2.toggle()">Collapse Item 2</button>
+          <div class="w3-container">
+            <ngw3-accordion #accordion>
+              <ngw3-accordion-item>
+                <ngw3-accordion-title>
+                  acordion 1
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+
+              <ngw3-accordion-item #item2>
+                <ngw3-accordion-title>
+                  acordion 2
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+
+              <ngw3-accordion-item>
+                <ngw3-accordion-title>
+                  acordion 3
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+
+              <ngw3-accordion-item>
+                <ngw3-accordion-title>
+                  acordion 4
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+
+              <ngw3-accordion-item>
+                <ngw3-accordion-title>
+                  acordion 5
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+
+              <ngw3-accordion-item>
+                <ngw3-accordion-title>
+                  acordion 6
+                </ngw3-accordion-title>
+                <ngw3-accordion-content>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                  <p>Lorem ipsum...</p>
+                </ngw3-accordion-content>
+              </ngw3-accordion-item>
+            </ngw3-accordion>
+          </div>
+          &nbsp;
+        </div>
+        <div class="w3-col l2 w3-hide-small">
+          <!-- Lateral Navigation for Overview -->
+          <code>Here will be placed the navigation</code>
+        </div>
+      </div>
+    </ngw3-tab>
+    <ngw3-tab tabTitle="API">
+      <div class="w3-row">
+        <div class="w3-col l10 s12">
+          <!--Main content for API Documentation -->
+          <h3>Documentation</h3>
+          <p>Documentation for current component</p>
+        </div>
+        <div class="w3-col l2 w3-hide-small">
+          <!-- Lateral Navigation for API -->
+          <code>Here will be placed the navigation menu for API</code>
+        </div>
+      </div>
+    </ngw3-tab>
+  </ngw3-tabs>
+</div>

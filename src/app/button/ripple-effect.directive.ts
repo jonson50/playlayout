@@ -9,7 +9,9 @@ export class RippleEffectDirective implements OnInit {
   private button: any;
   private baseColor!: string;
 
-  constructor(private elem: ElementRef, private builder: AnimationBuilder) {
+  constructor(
+    private elem: ElementRef,
+    private builder: AnimationBuilder) {
     this.button = this.elem.nativeElement;
   }
 

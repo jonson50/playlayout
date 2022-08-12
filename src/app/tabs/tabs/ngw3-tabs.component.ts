@@ -13,9 +13,6 @@ export class Ngw3TabsComponent implements AfterContentInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
   ngAfterContentInit(): void {
     // get all active tabs
     const selectedTab = this.tabs.find(tab => tab.selected);

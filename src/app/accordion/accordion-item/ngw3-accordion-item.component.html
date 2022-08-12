@@ -1,0 +1,11 @@
+<div class="accordion-item" #item>
+  <div class="w3-button w3-block w3-left-align w3-green w3-light-grey accordion-header" #title (click)="toggle()">
+    <ng-content select="ngw3-accordion-title"></ng-content>
+  </div>
+  <div class="accordion-content" #content [@contentExpansion]="isExpanded ? 'expanded':'collapsed'"
+    (@contentExpansion.done)="onExpansionDone()">
+    <div class="w3-container">
+      <ng-content select="ngw3-accordion-content"></ng-content>
+    </div>
+  </div>
+</div>
