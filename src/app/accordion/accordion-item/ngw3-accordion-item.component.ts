@@ -39,6 +39,7 @@ export class Ngw3AccordionItemComponent {
   private animating = false;
 
   @Input() isExpanded = false;
+  @Input() disabled = false;
   @Output() toggled: EventEmitter<any> = new EventEmitter<any>();
   @Output() opened: EventEmitter<any> = new EventEmitter<any>();
   @Output() collapsed: EventEmitter<any> = new EventEmitter<any>();
@@ -51,10 +52,12 @@ export class Ngw3AccordionItemComponent {
   item!: ElementRef;
 
   toggle() {
-    if (this.animating) return;
-    this.animating = true;
-    //this.isExpanded = !this.isExpanded;
-    this.toggled.next(this);
+    if (!this.disabled) {
+      if (this.animating) return;
+      this.animating = true;
+      //this.isExpanded = !this.isExpanded;
+      this.toggled.next(this);
+    }
   }
 
   onExpansionDone() {
