@@ -2,13 +2,27 @@
   border-radius: 7px 7px 0px 0px;
 }
 
-:host ::ng-deep ngw3-accordion-item:last-child .active .accordion-header {
-  border-radius: 0;
-  transition: border-radius 0s;
+:host ::ng-deep ngw3-accordion-item:last-child {
+  .accordion-header {
+    border-radius: 0px 0px 7px 7px;
+    transition: border-radius 1.30s;
+  }
+
+  .active .accordion-header {
+    border-radius: 0;
+    transition: border-radius 0s;
+  }
 }
 
-:host ::ng-deep ngw3-accordion-item:last-child .accordion-header {
-  border-radius: 0px 0px 7px 7px;
-  transition: border-radius 1.30s;
+:host ::ng-deep ngw3-accordion-item {
+  &:last-child .active {
+    border-top: 1px solid #bebebe;
+    border-bottom: none;
+    margin: 1px 0;
+  }
+  .active {
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    margin: 1px 0;
+  }
 }
-

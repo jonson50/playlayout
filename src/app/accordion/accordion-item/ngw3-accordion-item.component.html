@@ -1,10 +1,40 @@
-<div class="accordion-item" #item>
-  <div class="w3-block w3-left-align w3-green w3-light-grey accordion-header" [ngClass]="disabled ? 'w3-inactive-accordion-item':'w3-button'"
-        #title (click)="toggle()">
-    <ng-content select="ngw3-accordion-title"></ng-content>
+<div class="accordion-item" #item [ngClass]="isExpanded ? 'active' : ''">
+  <div
+    class="w3-bar accordion-header"
+    [ngClass]="[
+      disabled ? 'w3-inactive-accordion-item' : 'w3-button',
+      isExpanded ? 'w3-light-grey' : ''
+    ]"
+    #title
+    (click)="toggle()"
+  >
+    <div class="w3-bar-item">
+      <ng-content select="ngw3-accordion-title"></ng-content>
+    </div>
+    <!-- <div class="w3-bar-item w3-right"><span [ngClass]="isExpanded ? 'icon-expanded':'icon-non-expanded'"></span></div> -->
+    <div class="w3-bar-item w3-right">
+      <div class="accordion__toggle-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+        >
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
-  <div class="accordion-content" #content [@contentExpansion]="isExpanded ? 'expanded':'collapsed'"
-    (@contentExpansion.done)="onExpansionDone()">
+
+  <div
+    class="accordion-content"
+    #content
+    [@contentExpansion]="isExpanded ? 'expanded' : 'collapsed'"
+    (@contentExpansion.done)="onExpansionDone()"
+  >
     <div class="w3-container">
       <ng-content select="ngw3-accordion-content"></ng-content>
     </div>

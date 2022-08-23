@@ -1,6 +1,32 @@
-
 .accordion-item .accordion-content {
   overflow: hidden;
+}
+
+.accordion-item.active {
+  .accordion__toggle-btn {
+    transform: rotate(180deg);
+  }
+}
+
+.w3-bar {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+
+  .w3-bar-item:first-child {
+    padding-left: 0 !important;
+  }
+  .w3-bar-item:last-child {
+    padding-right: 0 !important;
+  }
+
+  /* Default toggle button styles */
+  .accordion__toggle-btn {
+    transition: transform 0.2s ease-in;
+    text-align: center;
+    padding: 0px 0;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .w3-inactive-accordion-item {
@@ -16,4 +42,3 @@
   white-space: nowrap;
   opacity: 0.35;
 }
-
