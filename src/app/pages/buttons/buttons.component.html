@@ -1,236 +1,322 @@
 <div class="w3-container">
-  <h2>Buttons</h2>
-  <ngw3-tabs>
-    <ngw3-tab tabTitle="Overview">
-      <div class="w3-row">
-        <div class="w3-col l10 s12">
-          <!-- Buttons samples -->
-          <h3>Basic Buttons (w3-button)</h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect [bordered]="false">Basic</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="primary" [bordered]="false">Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="secundary" [bordered]="false">secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="success" [bordered]="false">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="danger" [bordered]="false">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="warning" [bordered]="false">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="info" [bordered]="false">info</button>
-            </div>
-          </div>
+   <h2>Buttons</h2>
+   <ngw3-tabs>
+      <ngw3-tab tabTitle="Overview">
+         <div class="w3-row">
+            <div class="w3-col l10 s12">
+               <!-- Buttons samples -->
+               <div class="w3-container">
+                  <h3>Basic Buttons (w3-button)</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect [bordered]="false">Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="primary" [bordered]="false">Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="secundary" [bordered]="false">secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="success" [bordered]="false">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="danger" [bordered]="false">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="warning" [bordered]="false">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="info" [bordered]="false">info</button>
+                        </div>
+                     </div>
+                  </div>
 
-          <h3>w3-button </h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect [bordered]="false" [reised]="true">Basic</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="primary" [bordered]="false" [reised]="true">Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="secundary" [bordered]="false" [reised]="true">secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="success" [bordered]="false" [reised]="true">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="danger" [bordered]="false" [reised]="true">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="warning" [bordered]="false" [reised]="true">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="info" [bordered]="false" [reised]="true">info</button>
-            </div>
-          </div>
-
-
-          <h3>Stroked Buttons</h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect>Basic</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="primary">Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="secundary">secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="success">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="danger">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="warning">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="info">info</button>&nbsp;
-            </div>
-          </div>
-
-          <h3>w3-button </h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect [reised]="true">Basic</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="primary" [reised]="true" round="xxlarge">
-                Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="secundary" [reised]="true">
-                secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="success" [reised]="true">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="danger" [reised]="true">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="warning" [reised]="true">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-button rippleEffect color="info" [reised]="true">info</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <a href="/buttons" ngw3-button color="secundary" rippleEffect>Link Button</a>
-            </div>
-          </div>
+                  <h3>Basic Button with shadow (w3-btn) </h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect [bordered]="false" [reised]="true">Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="primary" [bordered]="false"
+                              [reised]="true">Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="secundary" [bordered]="false"
+                              [reised]="true">secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="success" [bordered]="false"
+                              [reised]="true">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="danger" [bordered]="false"
+                              [reised]="true">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="warning" [bordered]="false"
+                              [reised]="true">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="info" [bordered]="false"
+                              [reised]="true">info</button>
+                        </div>
+                     </div>
+                  </div>
 
 
-          <h3>Flat Buttons (w3-btn)</h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect>Basic</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="primary" round="square">Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="secundary">secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="success">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="danger">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="warning">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="info">info</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button class="w3-button w3-white w3-border w3-border-red w3-round-large" rippleEffect>Button</button>
-            </div>
-          </div>
+                  <h3>Bordered Button</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect>Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="primary">Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="secundary">secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="success">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="danger">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="warning">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="info">info</button>&nbsp;
+                        </div>
+                     </div>
+                  </div>
+
+                  <h3>Bordered Button with shadow</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect [reised]="true">Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="primary" [reised]="true">
+                              Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="secundary" [reised]="true">
+                              secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="success" [reised]="true">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="danger" [reised]="true">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="warning" [reised]="true">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="info" [reised]="true">info</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <a href="/buttons" ngw3-button color="secundary" rippleEffect>Link Button</a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <h3>Rounded Bordered Button with shadow</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect [reised]="true" round="xxlarge">Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="primary" [reised]="true" round="xxlarge">
+                              Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="secundary" [reised]="true" round="xxlarge">
+                              secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="success" [reised]="true"
+                              round="xxlarge">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="danger" [reised]="true"
+                              round="xxlarge">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="warning" [reised]="true"
+                              round="xxlarge">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-button rippleEffect color="info" [reised]="true" round="xxlarge">info</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <a href="/buttons" ngw3-button color="secundary" rippleEffect round="xxlarge">Link Button</a>
+                        </div>
+                     </div>
+                  </div>
 
 
-          <h3>w3-button </h3>
-          <div class="w3-block">
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect [reised]="true">Basic</button>&nbsp;
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="primary" [reised]="true">Primary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="secundary" [reised]="true">secundary</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="success" [reised]="true">success</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="danger" [reised]="true">danger</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="warning" [reised]="true">warning</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button ngw3-flat-button rippleEffect color="info" [reised]="true">info</button>
-            </div>
-            <div class="w3-cell w3-mobile w3-padding-4">
-              <button class="w3-button w3-white w3-border w3-border-red w3-round-large" rippleEffect>Button</button>
-            </div>
-          </div>
+                  <h3>Solid Square Buttons (w3-button)</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                     <div class="w3-block">
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect round="square">Basic</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="primary" round="square">Primary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="secundary" round="square">secundary</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="success" round="square">success</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="danger" round="square">danger</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="warning" round="square">warning</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button ngw3-flat-button rippleEffect color="info" round="square">info</button>
+                        </div>
+                        <div class="w3-cell w3-mobile w3-padding-4">
+                           <button class="w3-border-red" ngw3-button
+                              rippleEffect round="square">Button</button>
+                        </div>
+                     </div>
+                  </div>
 
-          <h3>Icon Buttons</h3>
-          <div class="w3-block">
-            <button ngw3-icon-button rippleEffect [bordered]="false">
-              <i class="fa fa-linkedin"></i></button>&nbsp;
-            <button ngw3-icon-button color="primary" rippleEffect [bordered]="false">
-              <i class="fa fa-instagram"></i></button>&nbsp;
-            <button ngw3-icon-button rippleEffect color="secundary" [bordered]="false">
-              <i class="fa fa-facebook-official"></i></button>&nbsp;
-            <button ngw3-icon-button rippleEffect color="success" [bordered]="false">
-              <i class="fa fa-snapchat"></i></button>&nbsp;
-            <button ngw3-icon-button rippleEffect color="danger" [bordered]="false">
-              <i class="fa fa-pinterest-p"></i></button>&nbsp;
-            <button ngw3-icon-button rippleEffect color="warning" [bordered]="false">
-              <i class="fa fa-home"></i></button>&nbsp;
-            <button ngw3-icon-button rippleEffect color="info" [bordered]="false">
-              <i class="fa fa-twitter"></i></button>&nbsp;
-          </div>
 
-          <h3>Button Bar</h3>
-          <div class="w3-bar">
-            <button class="w3-bar-item w3-button w3-black" rippleEffect>
-              Button</button>&nbsp;
-            <button class="w3-bar-item w3-button w3-teal" rippleEffect>
-              Button</button>&nbsp;
-            <button class="w3-bar-item w3-button w3-red" disabled>
-              Button</button>&nbsp;
-          </div>
+                  <h3>Solid Square Buttons with shadow (w3-btn)</h3>
+                  <div class="w3-bar">
+                     <button ngw3-button rippleEffect [bordered]="false" class="w3-bar-item w3-right"><i
+                           class="fa fa-code"></i> code</button>
+                  </div>
+                  <div class="w3-container w3-card-2 w3-padding-16">
+                  <div class="w3-block">
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect [reised]="true" round="square">Basic</button>&nbsp;
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="primary" [reised]="true" round="square">Primary</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="secundary" [reised]="true" round="square">secundary</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="success" [reised]="true" round="square">success</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="danger" [reised]="true" round="square">danger</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="warning" [reised]="true" round="square">warning</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button ngw3-flat-button rippleEffect color="info" [reised]="true" round="square">info</button>
+                     </div>
+                     <div class="w3-cell w3-mobile w3-padding-4">
+                        <button class="w3-button w3-white w3-border w3-border-red w3-round-large"
+                           rippleEffect>Button</button>
+                     </div>
+                  </div>
+               </div>
 
-          <h3>Block Button Bar</h3>
-          <div class="w3-bar">
-            <button class="w3-bar-item" ngw3-flat-button rippleEffect color="primary" round="square"
-              style="width: 33.3%">
-              Button
-            </button>
-            <button class="w3-bar-item" ngw3-flat-button rippleEffect color="danger" round="square"
-              style="width: 33.3%">
-              Button
-            </button>
-            <button class="w3-bar-item" ngw3-flat-button rippleEffect color="green" round="square" style="width: 33.3%">
-              Button
-            </button>
-          </div>
-          <br/>
-        </div>
-        <!-- Lateral Navigation for Overview -->
-        <div class="w3-col l2 w3-hide-small">
-          <code>Here will be placed the navigation</code>
-        </div>
-      </div>
-    </ngw3-tab>
-    <ngw3-tab tabTitle="API">
-      <div class="w3-row">
-        <div class="w3-col l10 s12">
-          <!-- API Documentation -->
-          <h2>Bogota</h2>
-          <p>Bogota is the capital of Colombia.</p>
-        </div>
-        <div class="w3-col l2 w3-hide-small">
-          <!-- Lateral Navigation for API -->
-          <code>Here will be placed the navigation menu for API</code>
-        </div>
-      </div>
-    </ngw3-tab>
-  </ngw3-tabs>
+                  <h3>Icon Buttons</h3>
+                  <div class="w3-block">
+                     <button ngw3-icon-button rippleEffect [bordered]="false">
+                        <i class="fa fa-linkedin"></i></button>&nbsp;
+                     <button ngw3-icon-button color="primary" rippleEffect [bordered]="false">
+                        <i class="fa fa-instagram"></i></button>&nbsp;
+                     <button ngw3-icon-button rippleEffect color="secundary" [bordered]="false">
+                        <i class="fa fa-facebook-official"></i></button>&nbsp;
+                     <button ngw3-icon-button rippleEffect color="success" [bordered]="false">
+                        <i class="fa fa-snapchat"></i></button>&nbsp;
+                     <button ngw3-icon-button rippleEffect color="danger" [bordered]="false">
+                        <i class="fa fa-pinterest-p"></i></button>&nbsp;
+                     <button ngw3-icon-button rippleEffect color="warning" [bordered]="false">
+                        <i class="fa fa-home"></i></button>&nbsp;
+                     <button ngw3-icon-button rippleEffect color="info" [bordered]="false">
+                        <i class="fa fa-twitter"></i></button>&nbsp;
+                  </div>
+
+                  <h3>Button Bar</h3>
+                  <div class="w3-bar">
+                     <button class="w3-bar-item w3-button w3-black" rippleEffect>
+                        Button</button>&nbsp;
+                     <button class="w3-bar-item w3-button w3-teal" rippleEffect>
+                        Button</button>&nbsp;
+                     <button class="w3-bar-item w3-button w3-red" disabled>
+                        Button</button>&nbsp;
+                  </div>
+
+                  <h3>Block Button Bar</h3>
+                  <div class="w3-bar">
+                     <button class="w3-bar-item" ngw3-flat-button rippleEffect color="primary" round="square"
+                        style="width: 33.3%">
+                        Button
+                     </button>
+                     <button class="w3-bar-item" ngw3-flat-button rippleEffect color="danger" round="square"
+                        style="width: 33.3%">
+                        Button
+                     </button>
+                     <button class="w3-bar-item" ngw3-flat-button rippleEffect color="green" round="square"
+                        style="width: 33.3%">
+                        Button
+                     </button>
+                  </div>
+                  <br />
+               </div>
+            </div>
+            <!-- Lateral Navigation for Overview -->
+            <div class="w3-col l2 w3-hide-small">
+               <code>Here will be placed the navigation</code>
+            </div>
+         </div>
+      </ngw3-tab>
+      <ngw3-tab tabTitle="API">
+         <div class="w3-row">
+            <div class="w3-col l10 s12">
+               <!-- API Documentation -->
+               <h2>Bogota</h2>
+               <p>Bogota is the capital of Colombia.</p>
+            </div>
+            <div class="w3-col l2 w3-hide-small">
+               <!-- Lateral Navigation for API -->
+               <code>Here will be placed the navigation menu for API</code>
+            </div>
+         </div>
+      </ngw3-tab>
+   </ngw3-tabs>
 </div>
